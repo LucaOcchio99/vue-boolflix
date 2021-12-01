@@ -10,8 +10,8 @@
               </ul> -->
           </div> 
           <Card 
-             :title="item.title"
-             :originalTitle="item.original_title"
+             :title="item.title ? item.title : item.name"
+             :originalTitle="item.original_title ? item.original_title : item.original_name"
              :language="item.original_language"
              :vote="item.vote_average"
           />
