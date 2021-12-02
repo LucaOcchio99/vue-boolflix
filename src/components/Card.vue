@@ -22,7 +22,11 @@
                     />
                     <span v-else>{{ language }}</span>
                 </li>
-                <li><i class="fas fa-star" v-for="item in vote" :key="item" ></i></li>
+                <li>
+                    <i class="fas fa-star" v-for="item in vote" :key="item" ></i>
+                    <i class="far fa-star" v-for="item in (5 - vote)" :key="item"></i>
+                </li>
+
                 
        </ul>
    </div>
@@ -47,7 +51,7 @@ export default {
       isFlag() {
           return this.availableFlags.includes(this.language);
       }
-  }
+  },
 };
 </script>
 

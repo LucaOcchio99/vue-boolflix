@@ -13,7 +13,7 @@
              :title="item.title ? item.title : item.name"
              :originalTitle="item.original_title ? item.original_title : item.original_name"
              :language="item.original_language"
-             :vote="item.vote_average"
+             :vote="item.vote_average / 2"
              :poster="item.poster_path"
           />
       </div>
