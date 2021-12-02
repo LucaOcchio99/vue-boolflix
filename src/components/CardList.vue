@@ -14,10 +14,11 @@
              :originalTitle="item.original_title ? item.original_title : item.original_name"
              :language="item.original_language"
              :vote="item.vote_average"
+             :poster="item.poster_path"
           />
       </div>
   </section>
-</template>
+</template> 
 
 <script>
 import Card from '@/components/Card.vue';

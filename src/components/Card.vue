@@ -1,18 +1,28 @@
 <template>
    <div class="card">
+       <img
+         v-if="poster"
+         :src="`https://image.tmdb.org/t/p/w342${poster}`" 
+         :alt="title"
+         />
+        
+         <img
+            v-else   
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_6OlH2tebRRaJ0shk0sKiGlsk_fXM5RpL9s18JTHQDQ1tlbau0zQADbbGwuKhkljMg0s&usqp=CAU"
+            alt="title">
        <ul>
                 <li>Titolo: {{ title }}</li>
                 <li>Titolo Originale: {{ originalTitle }}</li>
                 <li>
                     Lingua: 
-                    <img 
+                    <img class="flag" 
                     v-if="isFlag" 
                     :src="require(`../assets/${language}.png`)" 
                     :alt="language" 
                     />
                     <span v-else>{{ language }}</span>
                 </li>
-                <li>voto: {{ vote }} </li>
+                <li>voto: {{ vote  }} </li>
        </ul>
    </div>
 </template>
@@ -21,10 +31,11 @@
 export default {
   name: 'Card',
   props: {
+      poster: String,
       title: String,
       originalTitle: String,
       language: String,
-      vote: Number
+      vote: Number,
   },
   data() {
       return {
@@ -40,9 +51,9 @@ export default {
 </script>
 
 <style scope lang="scss">
-.card {
-    img {
-        width: 30px;
-    }
-}
+ .card {
+     .flag {
+          width: 30px;
+     }
+ }
 </style>
