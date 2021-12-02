@@ -22,7 +22,8 @@
                     />
                     <span v-else>{{ language }}</span>
                 </li>
-                <li>voto: {{ vote  }} </li>
+                <li><i class="fas fa-star" v-for="item in vote" :key="item" ></i></li>
+                
        </ul>
    </div>
 </template>
@@ -52,7 +53,7 @@ export default {
 
 <style scope lang="scss">
  .card {
-     .flag {
+    .flag {
           width: 30px;
      }
  }

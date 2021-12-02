@@ -35,5 +35,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
 </style>

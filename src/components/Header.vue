@@ -2,11 +2,13 @@
   <header>
 
     <div class="left">
+      <img src="@/assets/boolflix.png" alt="">
        <ul>
          <li><a href="">Home</a></li>
-         <li><a href="">Serie Tv</a></li>
+         <li><a href="">Serie TV</a></li>
          <li><a href="">Film</a></li>
-         <li><a href="">Nuovi Arrivi</a></li>
+         <li><a href="">Originali</a></li>
+         <li><a href="">Aggiunti di recente</a></li>
          <li><a href="">La mia lista</a></li>
        </ul>
     </div>
