@@ -18,21 +18,23 @@
 
         <div class="card_back">    
        <ul>
-                <li> <strong>Titolo:</strong> {{ title }}</li>
-                <li> <strong>Titolo Originale:</strong> {{ originalTitle }}</li>
+                <li> <p><strong>Titolo:</strong> {{ title }}</p> </li>
+                <li> <p><strong>Titolo Originale:</strong> {{ originalTitle }}</p> </li>
                 <li>
-                   <strong>Lingua:</strong> 
+                  <p> <strong>Lingua:</strong> 
                     <img class="flag" 
                     v-if="isFlag" 
                     :src="require(`../assets/${language}.png`)" 
                     :alt="language" 
                     />
                     <span v-else>{{ language }}</span>
+                  </p>
                 </li>
                 <li>
-                    <strong>Voto: </strong>
+                   <p> <strong>Voto: </strong>
                     <i class="fas fa-star" v-for="item in Math.round(vote)" :key="item" ></i>
                     <i class="far fa-star" v-for="item in (5 - vote)" :key="item"></i>
+                    </p>
                 </li>
        </ul>
        </div>
@@ -141,8 +143,15 @@ export default {
 	backface-visibility: hidden;
 
     p {
-        
+    color: #555;
+	margin: 0 10px;
+	padding: 10px 5px;
+	border-top: 1px solid #000;
+	font-size: 14px;
+	font-style: italic;
     }
+
 }
+
 
 </style>
